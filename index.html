@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Game Review Hub</title>
+    <meta name="description" content="Read honest reviews of top trending games. Ratings, gameplay insights, and more.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GA4 Tracking Code -->
+    <!-- Replace G-XXXXXXXXXX with your own Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+        }
+
+        nav a {
+            color: #00ffcc;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .game-card {
+            background: #1c1c1c;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .btn {
+            background: #00ffcc;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1f1f1f;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎮 Top Game Review Hub</h1>
+    <p>Your Daily Dose of Honest Gaming Reviews</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Reviews</a>
+    <a href="#">Top Rated</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="game-card">
+        <h2>🔥 GTA VI (Upcoming)</h2>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+        <p>Massive open world, realistic gameplay, and stunning graphics.</p>
+        <button class="btn" onclick="trackClick('GTA VI Review')">Read Full Review</button>
+    </div>
+
+    <div class="game-card">
+        <h2>⚔ Call of Duty Warzone</h2>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
+        <p>Fast-paced multiplayer battle royale experience.</p>
+        <button class="btn" onclick="trackClick('COD Review')">Read Full Review</button>
+    </div>
+
+    <div class="game-card">
+        <h2>🚗 Forza Horizon 5</h2>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+        <p>Best racing experience with realistic driving physics.</p>
+        <button class="btn" onclick="trackClick('Forza Review')">Read Full Review</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Top Game Review Hub | Built for GA4 Practice
+</footer>
+
+<script>
+function trackClick(gameName) {
+    gtag('event', 'review_click', {
+        'event_category': 'engagement',
+        'event_label': gameName
+    });
+    alert("Tracking Click for: " + gameName);
+}
+</script>
+
+</body>
+</html>
